@@ -5,20 +5,25 @@ By Jennifer Lu
 
 ## How to run: #####
 
-* Open terminal.
+Open terminal. Type:
 ```
 javac Game.java
 java Game
 ```
-* Type "javac Game.java". This should compile Game.java and every other file in the folder.
-* Type "java Game". This will start the game.
-* Type "Y" in response to the prompt to actually start the game.
+Type "Y" in response to the prompt to actually start the game.
 
-To run tests:
+*To run tests:*
+For 
+```
+javac -cp .:junit-4.10.jar:hamcrest-core-1.3.jar TestCard.java
+java -cp .:junit-4.10.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore TestCard
+```
 
-* To test Card.java: In terminal, type "javac -cp .:junit-4.10.jar:hamcrest-core-1.3.jar TestCard.java" to compile the TestCard.java file. Then type "java -cp .:junit-4.10.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore TestCard" to run the file.
-* To test Card.java: In terminal, type "javac -cp .:junit-4.10.jar:hamcrest-core-1.3.jar TestPiles.java" to compile the TestPiles.java file. Then type "java -cp .:junit-4.10.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore TestPiles" to run the file.
-* Both test files should pass.
+```
+javac -cp .:junit-4.10.jar:hamcrest-core-1.3.jar TestPiles.java
+java -cp .:junit-4.10.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore TestPiles
+```
+Both test files should pass.
 
 ## Design choices: #####
 
