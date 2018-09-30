@@ -12,13 +12,15 @@ java Game
 ```
 Type "Y" in response to the prompt to actually start the game.
 
-*To run tests:*
-For 
+**To run tests:**
+
+To test Card.java:
 ```
 javac -cp .:junit-4.10.jar:hamcrest-core-1.3.jar TestCard.java
 java -cp .:junit-4.10.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore TestCard
 ```
 
+To test Piles.java (and its extended classes):
 ```
 javac -cp .:junit-4.10.jar:hamcrest-core-1.3.jar TestPiles.java
 java -cp .:junit-4.10.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore TestPiles
