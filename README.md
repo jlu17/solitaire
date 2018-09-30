@@ -6,6 +6,10 @@ By Jennifer Lu
 ## How to run: #####
 
 * Open terminal.
+```
+javac Game.java
+java Game
+```
 * Type "javac Game.java". This should compile Game.java and every other file in the folder.
 * Type "java Game". This will start the game.
 * Type "Y" in response to the prompt to actually start the game.
