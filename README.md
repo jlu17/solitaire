@@ -1,7 +1,7 @@
 README for Solitaire
 =====
 
-## By Jennifer Lu #####
+By Jennifer Lu
 
 ## How to run: #####
 
