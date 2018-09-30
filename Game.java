@@ -54,8 +54,10 @@ class Game {
       if (won) {
         printOtherPile();
         printTableauPiles();
+        println("");
+        println("");
         println("=================");
-        println("You've completed the game!");
+        println("You've completed the game! Thanks for playing.");
         println("=================");
       }
     }
@@ -75,10 +77,7 @@ class Game {
     println("Made by: Jennifer Lu");
     println("");
     println("");
-    println("Welcome to Solitaire! Here are the rules: ");
-    println("===RULES TO BE PLACED HERE===");
-    println("");
-    println("Ready to play? (Y/n)");
+    println("Welcome to Solitaire! Ready to play? (Y/n)");
   }
 
   // Creates an arraylist with all of the cards, then shuffles them.
@@ -96,8 +95,6 @@ class Game {
     }
 
     Collections.shuffle(allCards);
-    println(Integer.toString(allCards.size()));
-    // printAllCards();
   }
 
   // For testing purposes (debugging).
