@@ -22,24 +22,29 @@ class Card {
     this.faceUp = false;
   }
 
-  // This method returns the suit of the card.
+  // Returns the suit of the card.
   public int getSuit() {
     return suit;
   }
 
-  // This method returns the rank of the card.
+  // Returns the rank of the card.
   public int getRank() {
     return rank;
   }
 
+  // Returns whether the card is shown or not.
   public boolean isFaceUp() {
     return faceUp;
   }
 
+  // Sets the card's faceUp value to true.
   public void flip() {
     this.faceUp = true;
   }
 
+  // Returns the card color:
+  // - Black: spade, club
+  // - Red: heard, diamond
   public int getColor() {
     if (getSuit() == spade || getSuit() == club) {
       return black;
