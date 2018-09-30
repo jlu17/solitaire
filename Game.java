@@ -52,8 +52,10 @@ class Game {
         gameOver = isGameOver();
       }
       if (won) {
+        printOtherPile();
+        printTableauPiles();
         println("=================");
-        println("You've completed the game.");
+        println("You've completed the game!");
         println("=================");
       }
     }
@@ -159,7 +161,6 @@ class Game {
     }
 
     // Waste pile has card info if drawn.
-    String otherPileString = "| X |  |";
     if (wastePile.isEmpty()) {
       otherPileString += "   |       ";
     } else {
@@ -225,7 +226,8 @@ class Game {
     println("3 - One tableau --> other tableau pile");
     println("4 - Multiple in one tableau --> other tableau pile");
     println("5 - Hand --> foundation pile");
-    println("6 - Draw hand");
+    println("6 - Foundation --> tableau pile");
+    println("7 - Draw hand");
     println("Please enter a number 1-6.");
     println("Q to quit");
     println("");
@@ -319,14 +321,31 @@ class Game {
         }
         break;
 
-      // Draw hand (aka move card from hand to waste pile)
+      // Foundation --> tableau (last case resort)
       case "6":
+        println("Type the number of the foundation pile you want to move from: ");
+        int fToPOrigin = reader.nextInt() - 1;
+        println("Type the number of the pile you want to move to:");
+        int fToPDestination = reader.nextInt() - 1;
+
+        if (fToPOrigin < 0 || fToPDestination < 0 || fToPOrigin >= foundation.length || fToPDestination >= tableau.length) {
+          println("Invalid pile or foundation number. Try again!");
+        } else {
+          FoundationPile f1 = foundation[fToPOrigin];
+          TableauPile p2 = tableau[fToPDestination];
+
+          addToPile(p2, f1);
+        }
+        break;
+
+      // Draw hand (aka move card from hand to waste pile)
+      case "7":
         drawHand();
         break;
 
       // Quit
       case "q":
-      case 'Q':
+      case "Q":
         println("Thanks for playing!");
         gameOver = true;
         break;
